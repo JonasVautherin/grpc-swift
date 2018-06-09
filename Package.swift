@@ -19,7 +19,9 @@ import PackageDescription
 var packageDependencies: [Package.Dependency] = [
   .package(url: "https://github.com/apple/swift-protobuf.git", .upToNextMinor(from: "1.1.1")),
   .package(url: "https://github.com/kylef/Commander.git", from: "0.8.0"),
-  .package(url: "https://github.com/apple/swift-nio-zlib-support.git", from: "1.0.0")
+  .package(url: "https://github.com/apple/swift-nio-zlib-support.git", from: "1.0.0"),
+  .package(url: "https://github.com/apple/swift-nio.git", from: "1.7.0"),
+  .package(url: "https://github.com/apple/swift-nio-http2.git", .branch("master"))
 ]
 
 var cGRPCDependencies: [Target.Dependency] = []
@@ -35,11 +37,14 @@ let package = Package(
   name: "SwiftGRPC",
   products: [
     .library(name: "SwiftGRPC", targets: ["SwiftGRPC"]),
+//    .library(name: "SwiftGRPCNIO", targets: ["SwiftGRPCNIO"]),
   ],
   dependencies: packageDependencies,
   targets: [
     .target(name: "SwiftGRPC",
             dependencies: ["CgRPC", "SwiftProtobuf"]),
+    .target(name: "SwiftGRPCNIO",
+            dependencies: ["SwiftGRPC", "SwiftProtobuf", "NIOHTTP1", "NIOHTTP2"]),
     .target(name: "CgRPC",
             dependencies: cGRPCDependencies),
     .target(name: "RootsEncoder"),
@@ -58,7 +63,8 @@ let package = Package(
     .target(name: "Simple",
             dependencies: ["SwiftGRPC", "Commander"],
             path: "Sources/Examples/Simple"),
-    .testTarget(name: "SwiftGRPCTests", dependencies: ["SwiftGRPC"])
+    .testTarget(name: "SwiftGRPCTests", dependencies: ["SwiftGRPC"]),
+    .testTarget(name: "SwiftGRPCNIOTests", dependencies: ["SwiftGRPCNIO"])
   ],
   cLanguageStandard: .gnu11,
   cxxLanguageStandard: .cxx11)
