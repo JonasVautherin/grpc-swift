@@ -30,6 +30,8 @@ mkdir -p local
 
 if [ "$TRAVIS_OS_NAME" -eq "osx" ]; then
   PROTOC_URL=https://github.com/google/protobuf/releases/download/v3.5.1/protoc-3.5.1-osx-x86_64.zip
+  
+  brew install nghttp2
 else
   # Install swift
   SWIFT_URL=https://swift.org/builds/swift-4.1.1-release/ubuntu1404/swift-4.1.1-RELEASE/swift-4.1.1-RELEASE-ubuntu14.04.tar.gz
