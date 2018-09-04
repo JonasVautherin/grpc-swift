@@ -48,6 +48,9 @@ addons:
       - curl
       - unzip
 
+before_install:
+  - if [ "$TRAVIS_OS_NAME" -eq "osx" ]; then brew install nghttp2; done
+
 install: ./.travis-install.sh
 
 script:
