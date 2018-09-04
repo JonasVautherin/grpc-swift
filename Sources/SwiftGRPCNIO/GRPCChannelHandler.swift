@@ -1,6 +1,5 @@
 import Foundation
 import SwiftProtobuf
-import SwiftGRPC
 import NIO
 import NIOHTTP1
 

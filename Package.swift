@@ -65,7 +65,7 @@ let package = Package(
             dependencies: ["SwiftGRPC", "Commander"],
             path: "Sources/Examples/Simple"),
     .testTarget(name: "SwiftGRPCTests", dependencies: ["SwiftGRPC"]),
-    .testTarget(name: "SwiftGRPCNIOTests", dependencies: ["SwiftGRPCNIO"])
+    .testTarget(name: "SwiftGRPCNIOTests", dependencies: ["SwiftGRPC", "SwiftGRPCNIO"])
   ],
   cLanguageStandard: .gnu11,
   cxxLanguageStandard: .cxx11)

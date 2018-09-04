@@ -1,6 +1,5 @@
 import Foundation
 import SwiftProtobuf
-import SwiftGRPC
 import NIO
 import NIOHTTP1
 
@@ -25,8 +24,10 @@ public class BidirectionalStreamingCallHandler<RequestMessage: Message, Response
     handlerImplementation?(.end)
   }
   
-  public func sendMessage(_ message: ResponseMessage) {
-    ctx?.writeAndFlush(self.wrapOutboundOut(.message(message)), promise: nil)
+  public func sendMessage(_ message: ResponseMessage) -> EventLoopFuture<Void> {
+    let promise: EventLoopPromise<Void> = eventLoop.newPromise()
+    ctx?.writeAndFlush(self.wrapOutboundOut(.message(message)), promise: promise)
+    return promise.futureResult
   }
   
   public func sendStatus(_ status: GRPCStatus) {
