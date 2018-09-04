@@ -51,7 +51,7 @@ addons:
       - libnghttp2-dev
 
 before_install:
-  - if [ "$TRAVIS_OS_NAME" -eq "osx" ]; then brew install nghttp2; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nghttp2; fi
 
 install: ./.travis-install.sh
 
