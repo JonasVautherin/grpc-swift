@@ -29,7 +29,7 @@ public class ServerStreamingCallHandler<RequestMessage: Message, ResponseMessage
     ctx?.writeAndFlush(self.wrapOutboundOut(.message(message)), promise: nil)
   }
   
-  public func sendStatus(_ status: ServerStatus) {
+  public func sendStatus(_ status: GRPCStatus) {
     self.statusPromise.succeed(result: status)
   }
 }

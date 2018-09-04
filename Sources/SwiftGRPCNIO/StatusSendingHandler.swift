@@ -13,11 +13,13 @@ public class StatusSendingHandler<RequestMessage: Message, ResponseMessage: Mess
   public typealias InboundIn = GRPCServerRequestPart<RequestMessage>
   public typealias OutboundOut = GRPCServerResponsePart<ResponseMessage>
   
-  let statusPromise: EventLoopPromise<ServerStatus>
+  let statusPromise: EventLoopPromise<GRPCStatus>
+  public let eventLoop: EventLoop
   
   private(set) weak var ctx: ChannelHandlerContext?
   
   public init(eventLoop: EventLoop) {
+    self.eventLoop = eventLoop
     self.statusPromise = eventLoop.newPromise()
   }
   
@@ -25,22 +27,13 @@ public class StatusSendingHandler<RequestMessage: Message, ResponseMessage: Mess
     self.ctx = ctx
     
     statusPromise.futureResult
-      .mapIfError { ($0 as? ServerStatus) ?? .processingError }
+      .mapIfError { ($0 as? GRPCStatus) ?? .processingError }
       .whenSuccess { [weak self] in
         if let strongSelf = self,
           let ctx = strongSelf.ctx {
-          strongSelf.sendStatus($0, ctx: ctx, promise: nil)
+          ctx.writeAndFlush(strongSelf.wrapOutboundOut(.status($0)), promise: nil)
         }
     }
-  }
-  
-  //! TODO: This method is almost identical to the one in `GRPCChannelHandler`; we could try to unify them.
-  func sendStatus(_ status: ServerStatus, ctx: ChannelHandlerContext, promise: EventLoopPromise<Void>?) {
-    var trailers = HTTPHeaders(status.trailingMetadata.dictionaryRepresentation.map { ($0, $1) })
-    trailers.add(name: "grpc-status", value: String(describing: status.code.rawValue))
-    trailers.add(name: "grpc-message", value: status.message)
-    
-    return ctx.writeAndFlush(self.wrapOutboundOut(.trailers(trailers)), promise: promise)
   }
   
   public func channelRead(ctx: ChannelHandlerContext, data: NIOAny) {

@@ -12,7 +12,7 @@ public enum GRPCServerRequestPart<MessageType: Message> {
 public enum GRPCServerResponsePart<MessageType: Message> {
   case headers(HTTPHeaders)
   case message(MessageType)
-  case trailers(HTTPHeaders)
+  case status(GRPCStatus)
 }
 
 /// A simple channel handler that translates raw gRPC packets into decoded protobuf messages,
@@ -56,8 +56,8 @@ public final class GRPCServerCodec<RequestMessage: Message, ResponseMessage: Mes
       } catch {
         promise?.fail(error: error)
       }
-    case .trailers(let trailers):
-      ctx.write(self.wrapOutboundOut(.trailers(trailers)), promise: promise)
+    case .status(let status):
+      ctx.write(self.wrapOutboundOut(.status(status)), promise: promise)
     }
   }
 }

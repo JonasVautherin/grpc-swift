@@ -30,21 +30,6 @@ public final class GRPCChannelHandler: ChannelInboundHandler {
     self.servicesByName = servicesByName
   }
   
-  //! FIXME: Avoid the dependency on SwiftGRPC's `Metadata` object.
-  public func sendStatus(_ status: ServerStatus, ctx: ChannelHandlerContext) -> EventLoopFuture<Void> {
-    let promise: EventLoopPromise<Void> = ctx.eventLoop.newPromise()
-    sendStatus(status, ctx: ctx, promise: promise)
-    return promise.futureResult
-  }
-  
-  public func sendStatus(_ status: ServerStatus, ctx: ChannelHandlerContext, promise: EventLoopPromise<Void>?) {
-    var trailers = HTTPHeaders(status.trailingMetadata.dictionaryRepresentation.map { ($0, $1) })
-    trailers.add(name: "grpc-status", value: String(describing: status.code.rawValue))
-    trailers.add(name: "grpc-message", value: status.message)
-    
-    return ctx.writeAndFlush(self.wrapOutboundOut(.trailers(trailers)), promise: promise)
-  }
-  
   public func channelRead(ctx: ChannelHandlerContext, data: NIOAny) {
     let requestPart = self.unwrapInboundIn(data)
     switch requestPart {
@@ -53,8 +38,7 @@ public final class GRPCChannelHandler: ChannelInboundHandler {
       guard uriComponents.count >= 3 && uriComponents[0].isEmpty,
         let providerForServiceName = servicesByName[uriComponents[1]],
         let callHandler = providerForServiceName.handleMethod(uriComponents[2], headers: headers.headers, serverHandler: self, ctx: ctx) else {
-          sendStatus(ServerStatus(code: .unimplemented, message: "unknown method " + headers.uri),
-                     ctx: ctx, promise: nil)
+          ctx.writeAndFlush(self.wrapOutboundOut(.status(.unimplemented(method: headers.uri))), promise: nil)
           return
       }
       

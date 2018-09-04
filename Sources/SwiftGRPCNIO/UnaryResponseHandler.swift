@@ -22,13 +22,13 @@ public class UnaryResponseHandler<RequestMessage: Message, ResponseMessage: Mess
       .map { [weak self] responseMessage in
         guard let strongSelf = self,
           let ctx = strongSelf.ctx
-          else { return ServerStatus.processingError }
+          else { return GRPCStatus.processingError }
         
         //! FIXME: It would be nicer to chain sending the status onto a successful write, but for some reason the
         //  "write message" future doesn't seem to get fulfilled?
         ctx.write(strongSelf.wrapOutboundOut(.message(responseMessage)), promise: nil)
         
-        return ServerStatus.ok
+        return GRPCStatus.ok
       }
       .cascade(promise: statusPromise)
   }

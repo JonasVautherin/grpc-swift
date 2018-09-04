@@ -294,6 +294,7 @@ extension EchoServerTests {
     XCTAssertEqual("Swift echo update (2): baz", try! call.receive()!.text)
     
     let closeCompletionHandlerExpectation = expectation(description: "close completion handler called")
+    call.waitForSendOperationsToFinish()
     try! call.closeSend { closeCompletionHandlerExpectation.fulfill() }
     
     XCTAssertNil(try! call.receive())
@@ -339,6 +340,7 @@ extension EchoServerTests {
     }
     
     let closeCompletionHandlerExpectation = expectation(description: "close completion handler called")
+    call.waitForSendOperationsToFinish()
     try! call.closeSend { closeCompletionHandlerExpectation.fulfill() }
     
     XCTAssertNil(try! call.receive())

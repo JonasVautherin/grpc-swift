@@ -11,7 +11,7 @@ public enum RawGRPCServerRequestPart {
 public enum RawGRPCServerResponsePart {
   case headers(HTTPHeaders)
   case message(ByteBuffer)
-  case trailers(HTTPHeaders)
+  case status(GRPCStatus)
 }
 
 /// A simple channel handler that translates HTTP/1 data types into gRPC packets,
@@ -99,7 +99,10 @@ public final class HTTP1ToRawGRPCServerCodec: ChannelInboundHandler, ChannelOutb
       responseBuffer.write(integer: UInt32(messageBytes.readableBytes))
       responseBuffer.write(buffer: &messageBytes)
       ctx.write(self.wrapOutboundOut(.body(.byteBuffer(responseBuffer))), promise: promise)
-    case .trailers(let trailers):
+    case .status(let status):
+      var trailers = status.trailingMetadata
+      trailers.add(name: "grpc-status", value: String(describing: status.code.rawValue))
+      trailers.add(name: "grpc-message", value: status.message)
       ctx.write(self.wrapOutboundOut(.end(trailers)), promise: promise)
     }
   }
