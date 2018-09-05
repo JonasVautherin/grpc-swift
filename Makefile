@@ -41,10 +41,10 @@ xcodebuild: project
 		xcodebuild -project SwiftGRPC.xcodeproj -configuration "Debug" -parallelizeTargets -target SwiftGRPC -target Echo -target Simple -target protoc-gen-swiftgrpc build
 
 build-carthage:
-	carthage build --no-skip-current
+	carthage build -project SwiftGRPC-Carthage.xcodeproj --no-skip-current
 
 build-carthage-debug:
-	carthage build --no-skip-current --configuration Debug --platform iOS, macOS --verbose
+	carthage build -project SwiftGRPC-Carthage.xcodeproj --no-skip-current --configuration Debug --platform iOS, macOS --verbose
 
 clean:
 	-rm -rf Packages
