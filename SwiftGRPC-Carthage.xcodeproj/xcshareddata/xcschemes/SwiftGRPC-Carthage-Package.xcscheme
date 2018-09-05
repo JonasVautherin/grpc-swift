@@ -6,7 +6,71 @@
         <BuildableReference
           BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIOHTTP1"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
           BlueprintName = "SwiftProtobuf"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "SwiftGRPCNIO"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIOHTTP2"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIOPriorityQueue"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "Commander"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIOSHA1"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIOAtomics"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIOHTTPParser"
           ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -21,16 +85,8 @@
       <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
         <BuildableReference
           BuildableIdentifier = "primary"
-          BuildableName = "'$(TARGET_NAME)'"
-          BlueprintName = "protoc-gen-swiftgrpc"
-          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
-        </BuildableReference>
-      </BuildActionEntry>
-      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
-        <BuildableReference
-          BuildableIdentifier = "primary"
-          BuildableName = "'$(TARGET_NAME)'"
-          BlueprintName = "Simple"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "BoringSSL"
           ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -38,7 +94,31 @@
         <BuildableReference
           BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "BoringSSL"
+          BlueprintName = "SwiftGRPC"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIODarwin"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIOZlib"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIOConcurrencyHelpers"
           ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -53,24 +133,8 @@
       <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
         <BuildableReference
           BuildableIdentifier = "primary"
-          BuildableName = "'$(TARGET_NAME)'"
-          BlueprintName = "protoc-gen-swift"
-          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
-        </BuildableReference>
-      </BuildActionEntry>
-      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
-        <BuildableReference
-          BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "SwiftProtobufPluginLibrary"
-          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
-        </BuildableReference>
-      </BuildActionEntry>
-      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
-        <BuildableReference
-          BuildableIdentifier = "primary"
-          BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "Commander"
+          BlueprintName = "CNIONghttp2"
           ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -86,7 +150,55 @@
         <BuildableReference
           BuildableIdentifier = "primary"
           BuildableName = "'lib$(TARGET_NAME)'"
-          BlueprintName = "SwiftGRPC"
+          BlueprintName = "SwiftProtobufPluginLibrary"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'$(TARGET_NAME)'"
+          BlueprintName = "protoc-gen-swift"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIOTLS"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "CNIOLinux"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'$(TARGET_NAME)'"
+          BlueprintName = "Simple"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'lib$(TARGET_NAME)'"
+          BlueprintName = "NIO"
+          ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+        </BuildableReference>
+      </BuildActionEntry>
+      <BuildActionEntry buildForTesting = "YES" buildForRunning = "YES" buildForProfiling = "YES" buildForArchiving = "YES" buildForAnalyzing = "YES">
+        <BuildableReference
+          BuildableIdentifier = "primary"
+          BuildableName = "'$(TARGET_NAME)'"
+          BlueprintName = "protoc-gen-swiftgrpc"
           ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
         </BuildableReference>
       </BuildActionEntry>
@@ -99,6 +211,15 @@
     shouldUseLaunchSchemeArgsEnv = "YES"
     codeCoverageEnabled = "NO">
     <Testables>
+    <TestableReference
+      skipped = "NO">
+      <BuildableReference
+        BuildableIdentifier = "primary"
+        BuildableName = "'$(TARGET_NAME)'"
+        BlueprintName = "SwiftGRPCNIOTests"
+        ReferencedContainer = "container:SwiftGRPC-Carthage.xcodeproj">
+      </BuildableReference>
+    </TestableReference>
     <TestableReference
       skipped = "NO">
       <BuildableReference
