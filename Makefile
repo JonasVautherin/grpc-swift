@@ -44,7 +44,7 @@ build-carthage:
 	carthage build --no-skip-current
 
 build-carthage-debug:
-	carthage build --no-skip-current --configuration Debug --platform iOS, macOS
+	carthage build --no-skip-current --configuration Debug --platform iOS, macOS --verbose
 
 clean:
 	-rm -rf Packages
