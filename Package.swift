@@ -35,6 +35,7 @@ let package = Package(
   name: "SwiftGRPC",
   products: [
     .library(name: "SwiftGRPC", targets: ["SwiftGRPC"]),
+    .library(name: "CgRPC", targets: ["CgRPC"]),
   ],
   dependencies: packageDependencies,
   targets: [
