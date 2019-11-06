@@ -1,0 +1,959 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0393A2B8D857C4E8C3419135 /* Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B3C8A59DF76723E005DC2 /* Shims.swift */; };
+		04722B1CDBF6DA9B15CAC8B3 /* GRPCServerCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521B4F485A2C1CD7FBAED05 /* GRPCServerCodec.swift */; };
+		08D5086DB77E2AFCA2382AA7 /* ServerStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B029E1FE747ECE77EB7050 /* ServerStreamingCall.swift */; };
+		094A0C7C5A26E167485BC774 /* GRPCClientStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1675E675E54E7A1DAF4072 /* GRPCClientStateMachine.swift */; };
+		0BC92A74CA3CA539B3AB72E4 /* BaseClientCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07942893217D044E164B94B2 /* BaseClientCall.swift */; };
+		0C3C7ED3EA3FE12BC3B497BB /* GRPCChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA3FC2E68BEC27C58335C88 /* GRPCChannelHandler.swift */; };
+		0D719A608693604BBDF668DA /* DelegatingErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA9FB661A391F74267C601 /* DelegatingErrorHandler.swift */; };
+		0E3C463AB3577978716038A5 /* TLSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CABC458C069E95C49AAF8 /* TLSConfiguration.swift */; };
+		0FA342770460CBF31BC47BB0 /* ServerStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E8E043661008B92840630 /* ServerStreamingCallHandler.swift */; };
+		0FF54BB4438BDFE5897CAEC4 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC264C0CF3DEE6CE8A9153A /* Box.swift */; };
+		1206F4CB00383E58E042DD5A /* BidirectionalStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA8EBDFF64036BE6AD8F81 /* BidirectionalStreamingCallHandler.swift */; };
+		1335B130DC971DFB02FD6387 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF7BA3A834396F6A23EA73 /* Stopwatch.swift */; };
+		167725EA2B4619996EF90A2F /* GRPCContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4501AE30A2FF3D38415274A /* GRPCContentType.swift */; };
+		182AC6126A5F3A2AC9B86092 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 09063EAFD04837E375CBDA9C /* NIO */; };
+		192C6FEE44824059C46E07DC /* LengthPrefixedMessageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5262B92CE49AD245365D25 /* LengthPrefixedMessageWriter.swift */; };
+		1B92BA691EF76FC5A7656CA0 /* GRPCHeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7323B86752580D691F804D /* GRPCHeaderName.swift */; };
+		1FC9680AE1D9E8632AB9E7A5 /* ClientStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3747D6338B5C82FA1F54B3 /* ClientStreamingCall.swift */; };
+		21247305814AE1D23E8A87F9 /* GRPCHeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7323B86752580D691F804D /* GRPCHeaderName.swift */; };
+		2135A650447D7B58933366F0 /* ClientOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820FAFAA9F1ECB17058D734 /* ClientOptions.swift */; };
+		2451EB37DFE051985AEE910D /* SettingsObservingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45199D66A639B1AD3AD39954 /* SettingsObservingHandler.swift */; };
+		267F8FCE97598500246C7C9A /* ClientStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC693F784AC9EA760D9FD2 /* ClientStreamingCallHandler.swift */; };
+		26B815217BF2B5005C93BC6A /* ClientCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA3BDFE422CDC3BBEE9FEC /* ClientCall.swift */; };
+		29555B0C2F1AC28EC553903A /* ReadWriteStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326EC5E0ACFC8B7E75A016F /* ReadWriteStates.swift */; };
+		295AB4E92E009A55B08AD5DC /* GRPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0AFE846F151C68A37C95B6 /* GRPCError.swift */; };
+		2BDDBB28CD4D3DB5CAB22205 /* UnaryCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED60426D7ABB1B704EABD87 /* UnaryCallHandler.swift */; };
+		2C94961BC26B4A10E04CB632 /* UnaryCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D510EC418D40D3D57C30F /* UnaryCall.swift */; };
+		2D5ECE5C2C1A13EDE4DA2F58 /* ConnectivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28F98D08C5A5E51B1DF2A3 /* ConnectivityState.swift */; };
+		2DD12A20E0F620B532227AD3 /* ClientStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3747D6338B5C82FA1F54B3 /* ClientStreamingCall.swift */; };
+		315082166822D37C7470502B /* StreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF24DC1C8754A173F0246D7 /* StreamEvent.swift */; };
+		31730078D6A30F724A636F3E /* ServerCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD4956124B254F18BE854 /* ServerCallContext.swift */; };
+		334F0295D325DDFEDE0F9099 /* GRPCClientCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63FA1DD801D1E19416C0B6D /* GRPCClientCodec.swift */; };
+		338374EB04356D6362530619 /* CompressionMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C43D4E0D7B3F4A307AA44A /* CompressionMechanism.swift */; };
+		344CED58F3D6F7E63048119E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E9B5C17EAE643BD879261 /* Logger.swift */; };
+		369F2321617A73869483850B /* GRPCStatusMessageMarshaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3680AF303FBFFA1729E65C86 /* GRPCStatusMessageMarshaller.swift */; };
+		37470B324A6A2AFCF97CCD2A /* ClientResponseChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918A22751821BE96B2430D4 /* ClientResponseChannelHandler.swift */; };
+		39D1B7D61D7FBB3034C27CCD /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 3E71CC899479B44A568EE4AE /* NIO */; };
+		3CECE08AFDAEBA2AA12888E5 /* GRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425E0CCB1F547493D55FDAE1 /* GRPCClient.swift */; };
+		40577352CB88DD016D5FF156 /* GRPCStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1032977ADA9CE6641A6AE8F /* GRPCStatus.swift */; };
+		43B6D54A2083B3594B6F3E15 /* GRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425E0CCB1F547493D55FDAE1 /* GRPCClient.swift */; };
+		43CCDA8AE3BB02E8EE28F4D9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947F01DDA4C4FB9038A6642 /* Server.swift */; };
+		4407A526A2DD3C101B9A29E0 /* GRPCTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2C38EADB65ABBE0F10E78 /* GRPCTimeout.swift */; };
+		470FB2465573CB5E153C82BC /* ClientConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62868B91B337E7BE6D034B9 /* ClientConnection.swift */; };
+		4A97C15A05E99B12ADF0D804 /* BidirectionalStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757C6FFFE7021954BFC68418 /* BidirectionalStreamingCall.swift */; };
+		4BFC19CAD7D62B515DE4AF84 /* ConnectionBackoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DA7EDC651F195D7D81CEE2 /* ConnectionBackoff.swift */; };
+		4C57172874E6A1B1F0EFABDD /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = A287C624868D0B390925B4C8 /* SwiftProtobuf */; };
+		4CDF9ECBC07DE65D8AF72E3B /* ServerErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA10CB8F759DF0E63D5E0E7 /* ServerErrorDelegate.swift */; };
+		4F374DECA88CCA4E83848604 /* ServerErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA10CB8F759DF0E63D5E0E7 /* ServerErrorDelegate.swift */; };
+		506080D0168E630E1CF84022 /* DelegatingErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA9FB661A391F74267C601 /* DelegatingErrorHandler.swift */; };
+		50AD2387F2E0BCBE40A561E4 /* ClientRequestChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909219FCB8C5039A934D66CB /* ClientRequestChannelHandler.swift */; };
+		518AD3EA32A9A4846845FDCD /* LengthPrefixedMessageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5262B92CE49AD245365D25 /* LengthPrefixedMessageWriter.swift */; };
+		56CC37E775AE453F1699AD1C /* ClientConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62868B91B337E7BE6D034B9 /* ClientConnection.swift */; };
+		5931C67DD40188673A097F2B /* ClientCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA3BDFE422CDC3BBEE9FEC /* ClientCall.swift */; };
+		5BBCDC399AA7589AD639695C /* ConnectionBackoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DA7EDC651F195D7D81CEE2 /* ConnectionBackoff.swift */; };
+		5C5A429E471B06D6867D4C9A /* NIOTransportServices in Frameworks */ = {isa = PBXBuildFile; productRef = 68B1982BF8B9AFAC5EEA3D47 /* NIOTransportServices */; };
+		5D777B430FED2BD8F0539A1F /* NIOHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = 969D8861A2E3E52EEC6D4552 /* NIOHTTP2 */; };
+		6525382BC45D9FF07DEAA4C7 /* WebCORSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EEA1A3D4B7C6B257902B2F /* WebCORSHandler.swift */; };
+		664A6F4A43B758A8EFEE4524 /* StreamingResponseCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB283FC065046C1811103C3 /* StreamingResponseCallContext.swift */; };
+		66E42E2B7AB4C2B45C2B8B95 /* BidirectionalStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757C6FFFE7021954BFC68418 /* BidirectionalStreamingCall.swift */; };
+		6753DC0DBB0748C8E4FE1F0F /* GRPCClientCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63FA1DD801D1E19416C0B6D /* GRPCClientCodec.swift */; };
+		6EC5D5D36D206C697BC6770C /* GRPCChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA3FC2E68BEC27C58335C88 /* GRPCChannelHandler.swift */; };
+		70862E6F7E226F3A2A282314 /* BaseCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E0666E1F84E05D9E238DB /* BaseCallHandler.swift */; };
+		72D10FA9F773DDAD8418D5AA /* CompressionMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C43D4E0D7B3F4A307AA44A /* CompressionMechanism.swift */; };
+		736B7750CCCB4D9ECFBD3A05 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF7BA3A834396F6A23EA73 /* Stopwatch.swift */; };
+		751C5EB1A218A4BADCE41B0D /* BaseCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E0666E1F84E05D9E238DB /* BaseCallHandler.swift */; };
+		787BE7DC97EA44643D7B2931 /* ClientErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D64EE13390EEA69961BCF4 /* ClientErrorDelegate.swift */; };
+		79738BC248AD58A0C1360822 /* TLSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CABC458C069E95C49AAF8 /* TLSConfiguration.swift */; };
+		79C5FD092B1CE935E03EF486 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FB64A7654252103AC1E9F7D /* Logging */; };
+		7C4056E89EB81DF8C5CB7277 /* HTTPProtocolSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D05BA3DBB3020EAB704EC1F /* HTTPProtocolSwitcher.swift */; };
+		81DEED2EA8DF58EAA6BE2F52 /* Shims.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B3C8A59DF76723E005DC2 /* Shims.swift */; };
+		83F439586F48DF8FB638E31E /* GRPCServerCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9521B4F485A2C1CD7FBAED05 /* GRPCServerCodec.swift */; };
+		84CDCA9C71C7346B9FC2B290 /* UnaryResponseCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEDD0EEC7BD0D3DC8B54E3B /* UnaryResponseCallContext.swift */; };
+		856305AC75873B5C8B898ED5 /* ServerStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20E8E043661008B92840630 /* ServerStreamingCallHandler.swift */; };
+		8D7D4B452C61BABD7BB3D18B /* LengthPrefixedMessageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12613ABD6F4A6E4454084351 /* LengthPrefixedMessageReader.swift */; };
+		8E1BDAA1822EECAC6B1A47D5 /* GRPCContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4501AE30A2FF3D38415274A /* GRPCContentType.swift */; };
+		92572010E1A6575E377355B1 /* TLSVerificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D67463AB33B7B97486055A /* TLSVerificationHandler.swift */; };
+		931B55E933E8C55CB2C6EA5A /* ReadWriteStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326EC5E0ACFC8B7E75A016F /* ReadWriteStates.swift */; };
+		93DAF3D88423E8A3396EC622 /* GRPCClientChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15341B73D58B1B17BC80831E /* GRPCClientChannelHandler.swift */; };
+		9458D998EA2F98047E04C202 /* StreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF24DC1C8754A173F0246D7 /* StreamEvent.swift */; };
+		95FAD473F2F41F919EEA2E17 /* GRPCClientChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15341B73D58B1B17BC80831E /* GRPCClientChannelHandler.swift */; };
+		960F6D1BA14670C121BF450D /* TLSVerificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D67463AB33B7B97486055A /* TLSVerificationHandler.swift */; };
+		980E2AB58EDF2CB0EE3D741B /* LoggingServerErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CF14D739FF05B0512F2D8 /* LoggingServerErrorDelegate.swift */; };
+		990717A001558B4080449477 /* LengthPrefixedMessageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12613ABD6F4A6E4454084351 /* LengthPrefixedMessageReader.swift */; };
+		9A23A1B6C83B22794D7303FD /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFDEB244059169FF9DFA8CE /* PlatformSupport.swift */; };
+		9A9B87032F653CB7E9F67327 /* ServerStreamingCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B029E1FE747ECE77EB7050 /* ServerStreamingCall.swift */; };
+		9B4D4AD65F36A5F472EF7093 /* ConnectivityState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E28F98D08C5A5E51B1DF2A3 /* ConnectivityState.swift */; };
+		9D47F22F1B56B4309A9007FF /* GRPCClientStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1675E675E54E7A1DAF4072 /* GRPCClientStateMachine.swift */; };
+		A0D657E20BAC21AB1F90FB1B /* ServerCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD4956124B254F18BE854 /* ServerCallContext.swift */; };
+		A57BDC9E2E1191135F8CD516 /* SettingsObservingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45199D66A639B1AD3AD39954 /* SettingsObservingHandler.swift */; };
+		ABB963AC7CF695C851C8063B /* BidirectionalStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA8EBDFF64036BE6AD8F81 /* BidirectionalStreamingCallHandler.swift */; };
+		AC50A532A1112AB6AB540499 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC264C0CF3DEE6CE8A9153A /* Box.swift */; };
+		AF34A3DDDB00D2DB47B4D4C6 /* GRPCStatusMessageMarshaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3680AF303FBFFA1729E65C86 /* GRPCStatusMessageMarshaller.swift */; };
+		B05BD1F23D5029FD3757BAF2 /* ClientResponseChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918A22751821BE96B2430D4 /* ClientResponseChannelHandler.swift */; };
+		B103458F6F034E015E019692 /* WebCORSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EEA1A3D4B7C6B257902B2F /* WebCORSHandler.swift */; };
+		B54866001F4EEED45B34D3D9 /* NIOSSL in Frameworks */ = {isa = PBXBuildFile; productRef = C974C5968A915B15DA9A6F58 /* NIOSSL */; };
+		B825134B938E0EB54A3F3FCB /* HTTP1ToRawGRPCServerCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AFBA0849A8C081871F189 /* HTTP1ToRawGRPCServerCodec.swift */; };
+		BA770F6E1F1F650FF038150E /* HTTP1ToRawGRPCClientCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF44C186E7AE29EAF3826B /* HTTP1ToRawGRPCClientCodec.swift */; };
+		BFD9E60FAD0BF36A2A833912 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D8DCCB2A3A338E4EB0263D1 /* Logging */; };
+		C0EFD42A4D3DAAEA340AD0A8 /* NIOHTTP2 in Frameworks */ = {isa = PBXBuildFile; productRef = 170556512A25E8649A4BF792 /* NIOHTTP2 */; };
+		C2F8CD32BC09BB88A64D12B6 /* ClientErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D64EE13390EEA69961BCF4 /* ClientErrorDelegate.swift */; };
+		D01BB6EACD747FCC98476290 /* NIOSSL in Frameworks */ = {isa = PBXBuildFile; productRef = C447F380D23495FF936B7ED0 /* NIOSSL */; };
+		D0C466330C07BD9980D0A4DA /* GRPCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0AFE846F151C68A37C95B6 /* GRPCError.swift */; };
+		D3192B95113CAD9F9AB10462 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E9B5C17EAE643BD879261 /* Logger.swift */; };
+		D51057FCBD66AD20182A47AB /* BaseClientCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07942893217D044E164B94B2 /* BaseClientCall.swift */; };
+		E32168F716FF3297545F63D1 /* GRPCStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1032977ADA9CE6641A6AE8F /* GRPCStatus.swift */; };
+		E7C637B2690E8E5804CFB493 /* HTTP1ToRawGRPCClientCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF44C186E7AE29EAF3826B /* HTTP1ToRawGRPCClientCodec.swift */; };
+		E8F005EEE999F19E10CC01B4 /* ClientRequestChannelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909219FCB8C5039A934D66CB /* ClientRequestChannelHandler.swift */; };
+		E9861966BBB101D8A5E63DC4 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3947F01DDA4C4FB9038A6642 /* Server.swift */; };
+		E9EE51220B8F86456F61EB04 /* LoggingServerErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301CF14D739FF05B0512F2D8 /* LoggingServerErrorDelegate.swift */; };
+		EE109208E2BED22AA93E4701 /* HTTP1ToRawGRPCServerCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AFBA0849A8C081871F189 /* HTTP1ToRawGRPCServerCodec.swift */; };
+		F188CEA5EC125B9EB4C33973 /* HTTPProtocolSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D05BA3DBB3020EAB704EC1F /* HTTPProtocolSwitcher.swift */; };
+		F34E0714E7BBE9D4175DE7F9 /* NIOTransportServices in Frameworks */ = {isa = PBXBuildFile; productRef = 6436A8C7C16D30CF0294F4BF /* NIOTransportServices */; };
+		F518110A50ADF3254AAA0B55 /* GRPCTimeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2C38EADB65ABBE0F10E78 /* GRPCTimeout.swift */; };
+		F52D10924B25799FE6298034 /* UnaryCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77D510EC418D40D3D57C30F /* UnaryCall.swift */; };
+		F7592475C4B24F4829D342CF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 9A58E1457FC3F2434CDE268E /* SwiftProtobuf */; };
+		F82CB2F24180ABD73A48BB52 /* ClientOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820FAFAA9F1ECB17058D734 /* ClientOptions.swift */; };
+		F8BE4319ADC8407C39AC6426 /* ClientStreamingCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC693F784AC9EA760D9FD2 /* ClientStreamingCallHandler.swift */; };
+		F9C35786E023C5E84ED104A9 /* UnaryResponseCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEDD0EEC7BD0D3DC8B54E3B /* UnaryResponseCallContext.swift */; };
+		FD8EF8596CBBE9EF1EBBD9EE /* UnaryCallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED60426D7ABB1B704EABD87 /* UnaryCallHandler.swift */; };
+		FF01E4D3F33940B18157C1EB /* PlatformSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFDEB244059169FF9DFA8CE /* PlatformSupport.swift */; };
+		FFA6DDBC65A60BE19CF07AD6 /* StreamingResponseCallContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB283FC065046C1811103C3 /* StreamingResponseCallContext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07942893217D044E164B94B2 /* BaseClientCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClientCall.swift; sourceTree = "<group>"; };
+		0C7323B86752580D691F804D /* GRPCHeaderName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCHeaderName.swift; sourceTree = "<group>"; };
+		0DB283FC065046C1811103C3 /* StreamingResponseCallContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingResponseCallContext.swift; sourceTree = "<group>"; };
+		12613ABD6F4A6E4454084351 /* LengthPrefixedMessageReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthPrefixedMessageReader.swift; sourceTree = "<group>"; };
+		15341B73D58B1B17BC80831E /* GRPCClientChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCClientChannelHandler.swift; sourceTree = "<group>"; };
+		171CABC458C069E95C49AAF8 /* TLSConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSConfiguration.swift; sourceTree = "<group>"; };
+		1CF24DC1C8754A173F0246D7 /* StreamEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamEvent.swift; sourceTree = "<group>"; };
+		1D05BA3DBB3020EAB704EC1F /* HTTPProtocolSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProtocolSwitcher.swift; sourceTree = "<group>"; };
+		1E28F98D08C5A5E51B1DF2A3 /* ConnectivityState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityState.swift; sourceTree = "<group>"; };
+		24B029E1FE747ECE77EB7050 /* ServerStreamingCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStreamingCall.swift; sourceTree = "<group>"; };
+		25DA3BDFE422CDC3BBEE9FEC /* ClientCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCall.swift; sourceTree = "<group>"; };
+		2A1675E675E54E7A1DAF4072 /* GRPCClientStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCClientStateMachine.swift; sourceTree = "<group>"; };
+		301CF14D739FF05B0512F2D8 /* LoggingServerErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingServerErrorDelegate.swift; sourceTree = "<group>"; };
+		35FF7BA3A834396F6A23EA73 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		3680AF303FBFFA1729E65C86 /* GRPCStatusMessageMarshaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCStatusMessageMarshaller.swift; sourceTree = "<group>"; };
+		3947F01DDA4C4FB9038A6642 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		3EA10CB8F759DF0E63D5E0E7 /* ServerErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerErrorDelegate.swift; sourceTree = "<group>"; };
+		425E0CCB1F547493D55FDAE1 /* GRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCClient.swift; sourceTree = "<group>"; };
+		4326EC5E0ACFC8B7E75A016F /* ReadWriteStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteStates.swift; sourceTree = "<group>"; };
+		43DA7EDC651F195D7D81CEE2 /* ConnectionBackoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionBackoff.swift; sourceTree = "<group>"; };
+		45199D66A639B1AD3AD39954 /* SettingsObservingHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsObservingHandler.swift; sourceTree = "<group>"; };
+		46BA8EBDFF64036BE6AD8F81 /* BidirectionalStreamingCallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalStreamingCallHandler.swift; sourceTree = "<group>"; };
+		49DDD4956124B254F18BE854 /* ServerCallContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCallContext.swift; sourceTree = "<group>"; };
+		4CC264C0CF3DEE6CE8A9153A /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		50EEA1A3D4B7C6B257902B2F /* WebCORSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebCORSHandler.swift; sourceTree = "<group>"; };
+		53A2C38EADB65ABBE0F10E78 /* GRPCTimeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCTimeout.swift; sourceTree = "<group>"; };
+		5ED60426D7ABB1B704EABD87 /* UnaryCallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryCallHandler.swift; sourceTree = "<group>"; };
+		6820FAFAA9F1ECB17058D734 /* ClientOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientOptions.swift; sourceTree = "<group>"; };
+		6D8B3C8A59DF76723E005DC2 /* Shims.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shims.swift; sourceTree = "<group>"; };
+		70C43D4E0D7B3F4A307AA44A /* CompressionMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionMechanism.swift; sourceTree = "<group>"; };
+		757C6FFFE7021954BFC68418 /* BidirectionalStreamingCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalStreamingCall.swift; sourceTree = "<group>"; };
+		7EBC693F784AC9EA760D9FD2 /* ClientStreamingCallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientStreamingCallHandler.swift; sourceTree = "<group>"; };
+		8CFDEB244059169FF9DFA8CE /* PlatformSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformSupport.swift; sourceTree = "<group>"; };
+		909219FCB8C5039A934D66CB /* ClientRequestChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRequestChannelHandler.swift; sourceTree = "<group>"; };
+		93BFD2C39983D93C70FAD596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9521B4F485A2C1CD7FBAED05 /* GRPCServerCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCServerCodec.swift; sourceTree = "<group>"; };
+		9BA3FC2E68BEC27C58335C88 /* GRPCChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCChannelHandler.swift; sourceTree = "<group>"; };
+		A20E8E043661008B92840630 /* ServerStreamingCallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStreamingCallHandler.swift; sourceTree = "<group>"; };
+		A97E0666E1F84E05D9E238DB /* BaseCallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallHandler.swift; sourceTree = "<group>"; };
+		C1032977ADA9CE6641A6AE8F /* GRPCStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCStatus.swift; sourceTree = "<group>"; };
+		C4D64EE13390EEA69961BCF4 /* ClientErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientErrorDelegate.swift; sourceTree = "<group>"; };
+		C62868B91B337E7BE6D034B9 /* ClientConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientConnection.swift; sourceTree = "<group>"; };
+		C63FA1DD801D1E19416C0B6D /* GRPCClientCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCClientCodec.swift; sourceTree = "<group>"; };
+		C77D510EC418D40D3D57C30F /* UnaryCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryCall.swift; sourceTree = "<group>"; };
+		D1AA9FB661A391F74267C601 /* DelegatingErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatingErrorHandler.swift; sourceTree = "<group>"; };
+		DBC29E53C52E310BF21B5083 /* GRPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBF44C186E7AE29EAF3826B /* HTTP1ToRawGRPCClientCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP1ToRawGRPCClientCodec.swift; sourceTree = "<group>"; };
+		DEE2EB9C9AA558A17C54CFFA /* GRPC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRPC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D67463AB33B7B97486055A /* TLSVerificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLSVerificationHandler.swift; sourceTree = "<group>"; };
+		E4501AE30A2FF3D38415274A /* GRPCContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCContentType.swift; sourceTree = "<group>"; };
+		E56E9B5C17EAE643BD879261 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		EC3747D6338B5C82FA1F54B3 /* ClientStreamingCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientStreamingCall.swift; sourceTree = "<group>"; };
+		F918A22751821BE96B2430D4 /* ClientResponseChannelHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientResponseChannelHandler.swift; sourceTree = "<group>"; };
+		FBEDD0EEC7BD0D3DC8B54E3B /* UnaryResponseCallContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnaryResponseCallContext.swift; sourceTree = "<group>"; };
+		FC7AFBA0849A8C081871F189 /* HTTP1ToRawGRPCServerCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP1ToRawGRPCServerCodec.swift; sourceTree = "<group>"; };
+		FF0AFE846F151C68A37C95B6 /* GRPCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCError.swift; sourceTree = "<group>"; };
+		FF5262B92CE49AD245365D25 /* LengthPrefixedMessageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthPrefixedMessageWriter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E4130640E20194F211B4872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD9E60FAD0BF36A2A833912 /* Logging in Frameworks */,
+				39D1B7D61D7FBB3034C27CCD /* NIO in Frameworks */,
+				C0EFD42A4D3DAAEA340AD0A8 /* NIOHTTP2 in Frameworks */,
+				B54866001F4EEED45B34D3D9 /* NIOSSL in Frameworks */,
+				5C5A429E471B06D6867D4C9A /* NIOTransportServices in Frameworks */,
+				F7592475C4B24F4829D342CF /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FF550EF1252BDC80F728617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79C5FD092B1CE935E03EF486 /* Logging in Frameworks */,
+				182AC6126A5F3A2AC9B86092 /* NIO in Frameworks */,
+				5D777B430FED2BD8F0539A1F /* NIOHTTP2 in Frameworks */,
+				D01BB6EACD747FCC98476290 /* NIOSSL in Frameworks */,
+				F34E0714E7BBE9D4175DE7F9 /* NIOTransportServices in Frameworks */,
+				4C57172874E6A1B1F0EFABDD /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3846283F3C022659FEDA094C = {
+			isa = PBXGroup;
+			children = (
+				E4ECF1787123153D6A7EF127 /* GRPC */,
+				B57AECD77A644FBB506ECCD7 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		5F8268DF55B3610A643075D4 /* ClientCalls */ = {
+			isa = PBXGroup;
+			children = (
+				07942893217D044E164B94B2 /* BaseClientCall.swift */,
+				757C6FFFE7021954BFC68418 /* BidirectionalStreamingCall.swift */,
+				25DA3BDFE422CDC3BBEE9FEC /* ClientCall.swift */,
+				EC3747D6338B5C82FA1F54B3 /* ClientStreamingCall.swift */,
+				24B029E1FE747ECE77EB7050 /* ServerStreamingCall.swift */,
+				C77D510EC418D40D3D57C30F /* UnaryCall.swift */,
+			);
+			path = ClientCalls;
+			sourceTree = "<group>";
+		};
+		7BCB8CC4AD33847C54F9D054 /* ServerCallContexts */ = {
+			isa = PBXGroup;
+			children = (
+				49DDD4956124B254F18BE854 /* ServerCallContext.swift */,
+				0DB283FC065046C1811103C3 /* StreamingResponseCallContext.swift */,
+				FBEDD0EEC7BD0D3DC8B54E3B /* UnaryResponseCallContext.swift */,
+			);
+			path = ServerCallContexts;
+			sourceTree = "<group>";
+		};
+		B1FEFBDFCAFBECD81CC25D0B /* CallHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				A97E0666E1F84E05D9E238DB /* BaseCallHandler.swift */,
+				46BA8EBDFF64036BE6AD8F81 /* BidirectionalStreamingCallHandler.swift */,
+				7EBC693F784AC9EA760D9FD2 /* ClientStreamingCallHandler.swift */,
+				A20E8E043661008B92840630 /* ServerStreamingCallHandler.swift */,
+				5ED60426D7ABB1B704EABD87 /* UnaryCallHandler.swift */,
+			);
+			path = CallHandlers;
+			sourceTree = "<group>";
+		};
+		B57AECD77A644FBB506ECCD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2EB9C9AA558A17C54CFFA /* GRPC.framework */,
+				DBC29E53C52E310BF21B5083 /* GRPC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4ECF1787123153D6A7EF127 /* GRPC */ = {
+			isa = PBXGroup;
+			children = (
+				4CC264C0CF3DEE6CE8A9153A /* Box.swift */,
+				C62868B91B337E7BE6D034B9 /* ClientConnection.swift */,
+				C4D64EE13390EEA69961BCF4 /* ClientErrorDelegate.swift */,
+				6820FAFAA9F1ECB17058D734 /* ClientOptions.swift */,
+				909219FCB8C5039A934D66CB /* ClientRequestChannelHandler.swift */,
+				F918A22751821BE96B2430D4 /* ClientResponseChannelHandler.swift */,
+				70C43D4E0D7B3F4A307AA44A /* CompressionMechanism.swift */,
+				43DA7EDC651F195D7D81CEE2 /* ConnectionBackoff.swift */,
+				1E28F98D08C5A5E51B1DF2A3 /* ConnectivityState.swift */,
+				D1AA9FB661A391F74267C601 /* DelegatingErrorHandler.swift */,
+				9BA3FC2E68BEC27C58335C88 /* GRPCChannelHandler.swift */,
+				425E0CCB1F547493D55FDAE1 /* GRPCClient.swift */,
+				15341B73D58B1B17BC80831E /* GRPCClientChannelHandler.swift */,
+				C63FA1DD801D1E19416C0B6D /* GRPCClientCodec.swift */,
+				2A1675E675E54E7A1DAF4072 /* GRPCClientStateMachine.swift */,
+				E4501AE30A2FF3D38415274A /* GRPCContentType.swift */,
+				FF0AFE846F151C68A37C95B6 /* GRPCError.swift */,
+				0C7323B86752580D691F804D /* GRPCHeaderName.swift */,
+				9521B4F485A2C1CD7FBAED05 /* GRPCServerCodec.swift */,
+				C1032977ADA9CE6641A6AE8F /* GRPCStatus.swift */,
+				3680AF303FBFFA1729E65C86 /* GRPCStatusMessageMarshaller.swift */,
+				53A2C38EADB65ABBE0F10E78 /* GRPCTimeout.swift */,
+				DEBF44C186E7AE29EAF3826B /* HTTP1ToRawGRPCClientCodec.swift */,
+				FC7AFBA0849A8C081871F189 /* HTTP1ToRawGRPCServerCodec.swift */,
+				1D05BA3DBB3020EAB704EC1F /* HTTPProtocolSwitcher.swift */,
+				93BFD2C39983D93C70FAD596 /* Info.plist */,
+				12613ABD6F4A6E4454084351 /* LengthPrefixedMessageReader.swift */,
+				FF5262B92CE49AD245365D25 /* LengthPrefixedMessageWriter.swift */,
+				E56E9B5C17EAE643BD879261 /* Logger.swift */,
+				301CF14D739FF05B0512F2D8 /* LoggingServerErrorDelegate.swift */,
+				8CFDEB244059169FF9DFA8CE /* PlatformSupport.swift */,
+				4326EC5E0ACFC8B7E75A016F /* ReadWriteStates.swift */,
+				3947F01DDA4C4FB9038A6642 /* Server.swift */,
+				3EA10CB8F759DF0E63D5E0E7 /* ServerErrorDelegate.swift */,
+				45199D66A639B1AD3AD39954 /* SettingsObservingHandler.swift */,
+				6D8B3C8A59DF76723E005DC2 /* Shims.swift */,
+				35FF7BA3A834396F6A23EA73 /* Stopwatch.swift */,
+				1CF24DC1C8754A173F0246D7 /* StreamEvent.swift */,
+				171CABC458C069E95C49AAF8 /* TLSConfiguration.swift */,
+				E1D67463AB33B7B97486055A /* TLSVerificationHandler.swift */,
+				50EEA1A3D4B7C6B257902B2F /* WebCORSHandler.swift */,
+				B1FEFBDFCAFBECD81CC25D0B /* CallHandlers */,
+				5F8268DF55B3610A643075D4 /* ClientCalls */,
+				7BCB8CC4AD33847C54F9D054 /* ServerCallContexts */,
+			);
+			name = GRPC;
+			path = Sources/GRPC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C477DB5A4F519E110908AAA /* GRPC_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C41246062E53AB5593E3E7F /* Build configuration list for PBXNativeTarget "GRPC_macOS" */;
+			buildPhases = (
+				3BDBAD65E1A83A240500CD9A /* Sources */,
+				3FF550EF1252BDC80F728617 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54B1012DB782E466EE270F02 /* PBXTargetDependency */,
+				364FB2D175E152379DFDABA8 /* PBXTargetDependency */,
+				B6DCC75492F76FF03C5FA9A6 /* PBXTargetDependency */,
+				07D7DBBFF6C1DD8D244CE4FA /* PBXTargetDependency */,
+				73605E392F2D48789B1BCF11 /* PBXTargetDependency */,
+				14526321CD28015D0BB67856 /* PBXTargetDependency */,
+			);
+			name = GRPC_macOS;
+			packageProductDependencies = (
+				8FB64A7654252103AC1E9F7D /* Logging */,
+				09063EAFD04837E375CBDA9C /* NIO */,
+				969D8861A2E3E52EEC6D4552 /* NIOHTTP2 */,
+				C447F380D23495FF936B7ED0 /* NIOSSL */,
+				6436A8C7C16D30CF0294F4BF /* NIOTransportServices */,
+				A287C624868D0B390925B4C8 /* SwiftProtobuf */,
+			);
+			productName = GRPC_macOS;
+			productReference = DBC29E53C52E310BF21B5083 /* GRPC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A74725DBCA58746E042C3F3A /* GRPC_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5721F24802DFD2104114EEDD /* Build configuration list for PBXNativeTarget "GRPC_iOS" */;
+			buildPhases = (
+				0395B723D0AF2A2EF198C201 /* Sources */,
+				3E4130640E20194F211B4872 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21894BCC90663D1827DFE935 /* PBXTargetDependency */,
+				D39268432922897BFD5EDD2D /* PBXTargetDependency */,
+				8A874ABEA9ED9EA67A35EB2D /* PBXTargetDependency */,
+				C634B3B69D71D8AB81F1A18E /* PBXTargetDependency */,
+				637B331DD6FA8F369FF742D7 /* PBXTargetDependency */,
+				31758C415F2E38EBB6263D8E /* PBXTargetDependency */,
+			);
+			name = GRPC_iOS;
+			packageProductDependencies = (
+				5D8DCCB2A3A338E4EB0263D1 /* Logging */,
+				3E71CC899479B44A568EE4AE /* NIO */,
+				170556512A25E8649A4BF792 /* NIOHTTP2 */,
+				C974C5968A915B15DA9A6F58 /* NIOSSL */,
+				68B1982BF8B9AFAC5EEA3D47 /* NIOTransportServices */,
+				9A58E1457FC3F2434CDE268E /* SwiftProtobuf */,
+			);
+			productName = GRPC_iOS;
+			productReference = DEE2EB9C9AA558A17C54CFFA /* GRPC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8CAAA9546CC5BFFECFB7E0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 9AE0942C4ABE5974925A4E10 /* Build configuration list for PBXProject "GRPC-XcodeGen" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3846283F3C022659FEDA094C;
+			packageReferences = (
+				B0AABA01CF50112474BBD6D5 /* XCRemoteSwiftPackageReference "swift-log" */,
+				4BEF906F46E904A28A85D540 /* XCRemoteSwiftPackageReference "swift-nio" */,
+				B770EC5D123315FD1A62CB55 /* XCRemoteSwiftPackageReference "swift-nio-http2" */,
+				94486D831E52BA01AB7CF5B3 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */,
+				798EE1172C05A4E456AFA313 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */,
+				14F59C80341E351841D3B6FE /* XCRemoteSwiftPackageReference "swift-protobuf" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A74725DBCA58746E042C3F3A /* GRPC_iOS */,
+				9C477DB5A4F519E110908AAA /* GRPC_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0395B723D0AF2A2EF198C201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70862E6F7E226F3A2A282314 /* BaseCallHandler.swift in Sources */,
+				D51057FCBD66AD20182A47AB /* BaseClientCall.swift in Sources */,
+				4A97C15A05E99B12ADF0D804 /* BidirectionalStreamingCall.swift in Sources */,
+				ABB963AC7CF695C851C8063B /* BidirectionalStreamingCallHandler.swift in Sources */,
+				AC50A532A1112AB6AB540499 /* Box.swift in Sources */,
+				26B815217BF2B5005C93BC6A /* ClientCall.swift in Sources */,
+				56CC37E775AE453F1699AD1C /* ClientConnection.swift in Sources */,
+				C2F8CD32BC09BB88A64D12B6 /* ClientErrorDelegate.swift in Sources */,
+				2135A650447D7B58933366F0 /* ClientOptions.swift in Sources */,
+				E8F005EEE999F19E10CC01B4 /* ClientRequestChannelHandler.swift in Sources */,
+				B05BD1F23D5029FD3757BAF2 /* ClientResponseChannelHandler.swift in Sources */,
+				1FC9680AE1D9E8632AB9E7A5 /* ClientStreamingCall.swift in Sources */,
+				267F8FCE97598500246C7C9A /* ClientStreamingCallHandler.swift in Sources */,
+				72D10FA9F773DDAD8418D5AA /* CompressionMechanism.swift in Sources */,
+				4BFC19CAD7D62B515DE4AF84 /* ConnectionBackoff.swift in Sources */,
+				2D5ECE5C2C1A13EDE4DA2F58 /* ConnectivityState.swift in Sources */,
+				0D719A608693604BBDF668DA /* DelegatingErrorHandler.swift in Sources */,
+				0C3C7ED3EA3FE12BC3B497BB /* GRPCChannelHandler.swift in Sources */,
+				43B6D54A2083B3594B6F3E15 /* GRPCClient.swift in Sources */,
+				95FAD473F2F41F919EEA2E17 /* GRPCClientChannelHandler.swift in Sources */,
+				6753DC0DBB0748C8E4FE1F0F /* GRPCClientCodec.swift in Sources */,
+				9D47F22F1B56B4309A9007FF /* GRPCClientStateMachine.swift in Sources */,
+				167725EA2B4619996EF90A2F /* GRPCContentType.swift in Sources */,
+				295AB4E92E009A55B08AD5DC /* GRPCError.swift in Sources */,
+				21247305814AE1D23E8A87F9 /* GRPCHeaderName.swift in Sources */,
+				04722B1CDBF6DA9B15CAC8B3 /* GRPCServerCodec.swift in Sources */,
+				40577352CB88DD016D5FF156 /* GRPCStatus.swift in Sources */,
+				AF34A3DDDB00D2DB47B4D4C6 /* GRPCStatusMessageMarshaller.swift in Sources */,
+				4407A526A2DD3C101B9A29E0 /* GRPCTimeout.swift in Sources */,
+				BA770F6E1F1F650FF038150E /* HTTP1ToRawGRPCClientCodec.swift in Sources */,
+				EE109208E2BED22AA93E4701 /* HTTP1ToRawGRPCServerCodec.swift in Sources */,
+				7C4056E89EB81DF8C5CB7277 /* HTTPProtocolSwitcher.swift in Sources */,
+				8D7D4B452C61BABD7BB3D18B /* LengthPrefixedMessageReader.swift in Sources */,
+				192C6FEE44824059C46E07DC /* LengthPrefixedMessageWriter.swift in Sources */,
+				344CED58F3D6F7E63048119E /* Logger.swift in Sources */,
+				E9EE51220B8F86456F61EB04 /* LoggingServerErrorDelegate.swift in Sources */,
+				9A23A1B6C83B22794D7303FD /* PlatformSupport.swift in Sources */,
+				931B55E933E8C55CB2C6EA5A /* ReadWriteStates.swift in Sources */,
+				E9861966BBB101D8A5E63DC4 /* Server.swift in Sources */,
+				A0D657E20BAC21AB1F90FB1B /* ServerCallContext.swift in Sources */,
+				4F374DECA88CCA4E83848604 /* ServerErrorDelegate.swift in Sources */,
+				08D5086DB77E2AFCA2382AA7 /* ServerStreamingCall.swift in Sources */,
+				856305AC75873B5C8B898ED5 /* ServerStreamingCallHandler.swift in Sources */,
+				2451EB37DFE051985AEE910D /* SettingsObservingHandler.swift in Sources */,
+				81DEED2EA8DF58EAA6BE2F52 /* Shims.swift in Sources */,
+				736B7750CCCB4D9ECFBD3A05 /* Stopwatch.swift in Sources */,
+				9458D998EA2F98047E04C202 /* StreamEvent.swift in Sources */,
+				FFA6DDBC65A60BE19CF07AD6 /* StreamingResponseCallContext.swift in Sources */,
+				0E3C463AB3577978716038A5 /* TLSConfiguration.swift in Sources */,
+				960F6D1BA14670C121BF450D /* TLSVerificationHandler.swift in Sources */,
+				2C94961BC26B4A10E04CB632 /* UnaryCall.swift in Sources */,
+				2BDDBB28CD4D3DB5CAB22205 /* UnaryCallHandler.swift in Sources */,
+				84CDCA9C71C7346B9FC2B290 /* UnaryResponseCallContext.swift in Sources */,
+				B103458F6F034E015E019692 /* WebCORSHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDBAD65E1A83A240500CD9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751C5EB1A218A4BADCE41B0D /* BaseCallHandler.swift in Sources */,
+				0BC92A74CA3CA539B3AB72E4 /* BaseClientCall.swift in Sources */,
+				66E42E2B7AB4C2B45C2B8B95 /* BidirectionalStreamingCall.swift in Sources */,
+				1206F4CB00383E58E042DD5A /* BidirectionalStreamingCallHandler.swift in Sources */,
+				0FF54BB4438BDFE5897CAEC4 /* Box.swift in Sources */,
+				5931C67DD40188673A097F2B /* ClientCall.swift in Sources */,
+				470FB2465573CB5E153C82BC /* ClientConnection.swift in Sources */,
+				787BE7DC97EA44643D7B2931 /* ClientErrorDelegate.swift in Sources */,
+				F82CB2F24180ABD73A48BB52 /* ClientOptions.swift in Sources */,
+				50AD2387F2E0BCBE40A561E4 /* ClientRequestChannelHandler.swift in Sources */,
+				37470B324A6A2AFCF97CCD2A /* ClientResponseChannelHandler.swift in Sources */,
+				2DD12A20E0F620B532227AD3 /* ClientStreamingCall.swift in Sources */,
+				F8BE4319ADC8407C39AC6426 /* ClientStreamingCallHandler.swift in Sources */,
+				338374EB04356D6362530619 /* CompressionMechanism.swift in Sources */,
+				5BBCDC399AA7589AD639695C /* ConnectionBackoff.swift in Sources */,
+				9B4D4AD65F36A5F472EF7093 /* ConnectivityState.swift in Sources */,
+				506080D0168E630E1CF84022 /* DelegatingErrorHandler.swift in Sources */,
+				6EC5D5D36D206C697BC6770C /* GRPCChannelHandler.swift in Sources */,
+				3CECE08AFDAEBA2AA12888E5 /* GRPCClient.swift in Sources */,
+				93DAF3D88423E8A3396EC622 /* GRPCClientChannelHandler.swift in Sources */,
+				334F0295D325DDFEDE0F9099 /* GRPCClientCodec.swift in Sources */,
+				094A0C7C5A26E167485BC774 /* GRPCClientStateMachine.swift in Sources */,
+				8E1BDAA1822EECAC6B1A47D5 /* GRPCContentType.swift in Sources */,
+				D0C466330C07BD9980D0A4DA /* GRPCError.swift in Sources */,
+				1B92BA691EF76FC5A7656CA0 /* GRPCHeaderName.swift in Sources */,
+				83F439586F48DF8FB638E31E /* GRPCServerCodec.swift in Sources */,
+				E32168F716FF3297545F63D1 /* GRPCStatus.swift in Sources */,
+				369F2321617A73869483850B /* GRPCStatusMessageMarshaller.swift in Sources */,
+				F518110A50ADF3254AAA0B55 /* GRPCTimeout.swift in Sources */,
+				E7C637B2690E8E5804CFB493 /* HTTP1ToRawGRPCClientCodec.swift in Sources */,
+				B825134B938E0EB54A3F3FCB /* HTTP1ToRawGRPCServerCodec.swift in Sources */,
+				F188CEA5EC125B9EB4C33973 /* HTTPProtocolSwitcher.swift in Sources */,
+				990717A001558B4080449477 /* LengthPrefixedMessageReader.swift in Sources */,
+				518AD3EA32A9A4846845FDCD /* LengthPrefixedMessageWriter.swift in Sources */,
+				D3192B95113CAD9F9AB10462 /* Logger.swift in Sources */,
+				980E2AB58EDF2CB0EE3D741B /* LoggingServerErrorDelegate.swift in Sources */,
+				FF01E4D3F33940B18157C1EB /* PlatformSupport.swift in Sources */,
+				29555B0C2F1AC28EC553903A /* ReadWriteStates.swift in Sources */,
+				43CCDA8AE3BB02E8EE28F4D9 /* Server.swift in Sources */,
+				31730078D6A30F724A636F3E /* ServerCallContext.swift in Sources */,
+				4CDF9ECBC07DE65D8AF72E3B /* ServerErrorDelegate.swift in Sources */,
+				9A9B87032F653CB7E9F67327 /* ServerStreamingCall.swift in Sources */,
+				0FA342770460CBF31BC47BB0 /* ServerStreamingCallHandler.swift in Sources */,
+				A57BDC9E2E1191135F8CD516 /* SettingsObservingHandler.swift in Sources */,
+				0393A2B8D857C4E8C3419135 /* Shims.swift in Sources */,
+				1335B130DC971DFB02FD6387 /* Stopwatch.swift in Sources */,
+				315082166822D37C7470502B /* StreamEvent.swift in Sources */,
+				664A6F4A43B758A8EFEE4524 /* StreamingResponseCallContext.swift in Sources */,
+				79738BC248AD58A0C1360822 /* TLSConfiguration.swift in Sources */,
+				92572010E1A6575E377355B1 /* TLSVerificationHandler.swift in Sources */,
+				F52D10924B25799FE6298034 /* UnaryCall.swift in Sources */,
+				FD8EF8596CBBE9EF1EBBD9EE /* UnaryCallHandler.swift in Sources */,
+				F9C35786E023C5E84ED104A9 /* UnaryResponseCallContext.swift in Sources */,
+				6525382BC45D9FF07DEAA4C7 /* WebCORSHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07D7DBBFF6C1DD8D244CE4FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C447F380D23495FF936B7ED0 /* NIOSSL */;
+		};
+		14526321CD28015D0BB67856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A287C624868D0B390925B4C8 /* SwiftProtobuf */;
+		};
+		21894BCC90663D1827DFE935 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 5D8DCCB2A3A338E4EB0263D1 /* Logging */;
+		};
+		31758C415F2E38EBB6263D8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 9A58E1457FC3F2434CDE268E /* SwiftProtobuf */;
+		};
+		364FB2D175E152379DFDABA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 09063EAFD04837E375CBDA9C /* NIO */;
+		};
+		54B1012DB782E466EE270F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8FB64A7654252103AC1E9F7D /* Logging */;
+		};
+		637B331DD6FA8F369FF742D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 68B1982BF8B9AFAC5EEA3D47 /* NIOTransportServices */;
+		};
+		73605E392F2D48789B1BCF11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6436A8C7C16D30CF0294F4BF /* NIOTransportServices */;
+		};
+		8A874ABEA9ED9EA67A35EB2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 170556512A25E8649A4BF792 /* NIOHTTP2 */;
+		};
+		B6DCC75492F76FF03C5FA9A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 969D8861A2E3E52EEC6D4552 /* NIOHTTP2 */;
+		};
+		C634B3B69D71D8AB81F1A18E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C974C5968A915B15DA9A6F58 /* NIOSSL */;
+		};
+		D39268432922897BFD5EDD2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 3E71CC899479B44A568EE4AE /* NIO */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		69BCE99F9730072967EA8259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77915E9251AD0E5CB2B62542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/GRPC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.grpc.GRPC-iOS";
+				PRODUCT_NAME = GRPC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C6E8DD9338351CB62B4BABB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/GRPC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.grpc.GRPC-macOS";
+				PRODUCT_NAME = GRPC;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		D3367E2C16C63B64E76FB602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/GRPC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.grpc.GRPC-iOS";
+				PRODUCT_NAME = GRPC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		DE5C2DE2AE7F75FF7F4691AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FD67869768ABCF20D2114ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/GRPC/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.grpc.GRPC-macOS";
+				PRODUCT_NAME = GRPC;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5721F24802DFD2104114EEDD /* Build configuration list for PBXNativeTarget "GRPC_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77915E9251AD0E5CB2B62542 /* Debug */,
+				D3367E2C16C63B64E76FB602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		7C41246062E53AB5593E3E7F /* Build configuration list for PBXNativeTarget "GRPC_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD67869768ABCF20D2114ED1 /* Debug */,
+				C6E8DD9338351CB62B4BABB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		9AE0942C4ABE5974925A4E10 /* Build configuration list for PBXProject "GRPC-XcodeGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE5C2DE2AE7F75FF7F4691AE /* Debug */,
+				69BCE99F9730072967EA8259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14F59C80341E351841D3B6FE /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-protobuf";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		4BEF906F46E904A28A85D540 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		798EE1172C05A4E456AFA313 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-transport-services.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		94486D831E52BA01AB7CF5B3 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-ssl.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		B0AABA01CF50112474BBD6D5 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		B770EC5D123315FD1A62CB55 /* XCRemoteSwiftPackageReference "swift-nio-http2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio-http2.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09063EAFD04837E375CBDA9C /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BEF906F46E904A28A85D540 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		170556512A25E8649A4BF792 /* NIOHTTP2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B770EC5D123315FD1A62CB55 /* XCRemoteSwiftPackageReference "swift-nio-http2" */;
+			productName = NIOHTTP2;
+		};
+		3E71CC899479B44A568EE4AE /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BEF906F46E904A28A85D540 /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		5D8DCCB2A3A338E4EB0263D1 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0AABA01CF50112474BBD6D5 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		6436A8C7C16D30CF0294F4BF /* NIOTransportServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 798EE1172C05A4E456AFA313 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */;
+			productName = NIOTransportServices;
+		};
+		68B1982BF8B9AFAC5EEA3D47 /* NIOTransportServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 798EE1172C05A4E456AFA313 /* XCRemoteSwiftPackageReference "swift-nio-transport-services" */;
+			productName = NIOTransportServices;
+		};
+		8FB64A7654252103AC1E9F7D /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0AABA01CF50112474BBD6D5 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		969D8861A2E3E52EEC6D4552 /* NIOHTTP2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B770EC5D123315FD1A62CB55 /* XCRemoteSwiftPackageReference "swift-nio-http2" */;
+			productName = NIOHTTP2;
+		};
+		9A58E1457FC3F2434CDE268E /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F59C80341E351841D3B6FE /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		A287C624868D0B390925B4C8 /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14F59C80341E351841D3B6FE /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		C447F380D23495FF936B7ED0 /* NIOSSL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94486D831E52BA01AB7CF5B3 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */;
+			productName = NIOSSL;
+		};
+		C974C5968A915B15DA9A6F58 /* NIOSSL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94486D831E52BA01AB7CF5B3 /* XCRemoteSwiftPackageReference "swift-nio-ssl" */;
+			productName = NIOSSL;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E8CAAA9546CC5BFFECFB7E0E /* Project object */;
+}

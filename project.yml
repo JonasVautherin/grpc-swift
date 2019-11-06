@@ -1,0 +1,46 @@
+name: GRPC-XcodeGen
+options:
+  bundleIdPrefix: "io.grpc"
+  deploymentTarget:
+    iOS: 9.0
+  transitivelyLinkDependencies: true
+  indentWidth: 2
+  tabWidth: 2
+  usesTabs: false
+packages:
+  SwiftProtobuf:
+    url: https://github.com/apple/swift-protobuf
+    majorVersion: 1.5.0
+  NIO:
+    url: https://github.com/apple/swift-nio.git
+    majorVersion: 2.7.1
+  NIOHTTP2:
+    url: https://github.com/apple/swift-nio-http2.git
+    majorVersion: 1.5.0
+  NIOSSL:
+    url: https://github.com/apple/swift-nio-ssl.git
+    majorVersion: 2.4.0
+  NIOTransportServices:
+    url: https://github.com/apple/swift-nio-transport-services.git
+    majorVersion: 1.1.0
+  Logging:
+    url: https://github.com/apple/swift-log.git
+    majorVersion: 1.0.0
+targets:
+  GRPC:
+    platform: [macOS, iOS]
+    settings:
+      SWIFT_VERSION: 5
+    scheme: {}
+    sources:
+      - Sources/GRPC
+    info:
+      path: Sources/GRPC/Info.plist
+    dependencies:
+      - package: SwiftProtobuf
+      - package: NIO
+      - package: NIOHTTP2
+      - package: NIOSSL
+      - package: NIOTransportServices
+      - package: Logging
+    type: framework
